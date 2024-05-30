@@ -1,0 +1,454 @@
+---
+layout: page
+title: Description
+permalink: /description/
+---
+
+<!-- Slider Start -->
+<section id="global-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="block">
+                    <h1>Dataset Description and Evaluation</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="description">
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+    <h1> Dataset format </h1>
+                <div class="block">
+                            <p> All the annotations are encoded in JSON files. Two examples showing the annotations for the images below are presented.
+                                A detailed description of each entry from the JSON file is provided in the original paper. </p>
+          <img src="../img/semantic_entity_example_sr_1.png" alt="Img" width="70%" height="70%">
+        </div>
+        <body>
+    <pre>
+        {
+        "form": [
+        {
+            "id": 0,
+            "rect": true,
+            "box": [
+                279,
+                36,
+                412,
+                83
+            ],
+            "text": "MAGAZINE SCORES AUDIENCE STUDIES",
+            "lines": [
+                {
+                    "box": [
+                        279,
+                        36,
+                        404,
+                        53
+                    ],
+                    "text": "MAGAZINE SCORES",
+                    "words": [
+                        {
+                            "box": [
+                                279,
+                                36,
+                                345,
+                                53
+                            ],
+                            "text": "MAGAZINE"
+                        },
+                        {
+                            "box": [
+                                351,
+                                36,
+                                404,
+                                53
+                            ],
+                            "text": "SCORES"
+                        }
+                    ]
+                },
+                {
+                    "box": [
+                        281,
+                        63,
+                        412,
+                        83
+                    ],
+                    "text": "AUDIENCE STUDIES",
+                    "words": [
+                        {
+                            "box": [
+                                281,
+                                63,
+                                347,
+                                83
+                            ],
+                            "text": "AUDIENCE"
+                        },
+                        {
+                            "box": [
+                                352,
+                                64,
+                                412,
+                                81
+                            ],
+                            "text": "STUDIES"
+                        }
+                    ]
+                }
+            ],
+            "label": "header",
+            "linking": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    0,
+                    3
+                ]
+            ]
+        },
+        {
+            "id": 1,
+            "rect": true,
+            "box": [
+                41,
+                127,
+                84,
+                144
+            ],
+            "text": "Brand",
+            "lines": [
+                {
+                    "box": [
+                        41,
+                        127,
+                        84,
+                        144
+                    ],
+                    "text": "Brand",
+                    "words": [
+                        {
+                            "box": [
+                                41,
+                                127,
+                                84,
+                                144
+                            ],
+                            "text": "Brand"
+                        }
+                    ]
+                }
+            ],
+            "label": "question",
+            "linking": [
+                [
+                    0,
+                    1
+                ],
+                [
+                    1,
+                    2
+                ]
+            ]
+        },
+        {
+            "id": 2,
+            "rect": true,
+            "box": [
+                138,
+                124,
+                236,
+                143
+            ],
+            "text": "SALEM (RJR)",
+            "lines": [
+                {
+                    "box": [
+                        138,
+                        124,
+                        236,
+                        143
+                    ],
+                    "text": "SALEM (RJR)",
+                    "words": [
+                        {
+                            "text": "SALEM",
+                            "box": [
+                                138,
+                                126,
+                                184,
+                                143
+                            ]
+                        },
+                        {
+                            "text": "(RJR)",
+                            "box": [
+                                194,
+                                124,
+                                236,
+                                142
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "label": "answer",
+            "linking": [
+                [
+                    1,
+                    2
+                ]
+            ]
+        },
+        {
+            "id": 3,
+            "rect": true,
+            "box": [
+                459,
+                127,
+                538,
+                145
+            ],
+            "text": "Project #",
+            "lines": [
+                {
+                    "box": [
+                        459,
+                        127,
+                        538,
+                        145
+                    ],
+                    "text": "Project #",
+                    "words": [
+                        {
+                            "text": "Project",
+                            "box": [
+                                459,
+                                127,
+                                519,
+                                144
+                            ]
+                        },
+                        {
+                            "text": "#",
+                            "box": [
+                                525,
+                                127,
+                                538,
+                                145
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "label": "question",
+            "linking": [
+                [
+                    0,
+                    3
+                ],
+                [
+                    3,
+                    4
+                ]
+            ]
+        },
+        {
+            "id": 4,
+            "rect": true,
+            "box": [
+                568,
+                123,
+                612,
+                141
+            ],
+            "text": "74- 80",
+            "lines": [
+                {
+                    "box": [
+                        568,
+                        123,
+                        612,
+                        141
+                    ],
+                    "text": "74- 80",
+                    "words": [
+                        {
+                            "text": "74-",
+                            "box": [
+                                568,
+                                123,
+                                595,
+                                141
+                            ]
+                        },
+                        {
+                            "text": "80",
+                            "box": [
+                                594,
+                                123,
+                                612,
+                                138
+                            ]
+                        }
+                    ]
+                }
+            ],
+            "label": "answer",
+            "linking": [
+                [
+                    3,
+                    4
+                ]
+            ]
+        }
+    ]
+    }
+    </pre>
+</body>
+                <div class="block">
+                            <p> The following is an example of annotation for an item table, where the entity IDs correspond to the complete annotation JSON. </p>
+          <img src="../img/semantic_entity_example_sr_2.png" alt="Img" width="70%" height="70%">
+        </div>
+        <body>
+    <pre>
+        {
+        "form": [
+        {
+            "table_name": "item_table_0",
+            "entity_ids": [
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                37,
+                38,
+                39,
+                40,
+                41,
+                42,
+                43,
+                44,
+                45
+            ],
+            "table_box": [
+                45,
+                318,
+                654,
+                615
+            ],
+            "item_value_ids": {
+                "item_table_0_0": [
+                    26,
+                    27,
+                    28,
+                    29
+                ],
+                "item_table_0_1": [
+                    32,
+                    33,
+                    30,
+                    31
+                ],
+                "item_table_0_2": [
+                    34,
+                    35,
+                    36,
+                    37
+                ],
+                "item_table_0_3": [
+                    40,
+                    41,
+                    38,
+                    39
+                ],
+                "item_table_0_4": [
+                    42,
+                    43,
+                    44,
+                    45
+                ]
+            },
+            "item_value_boxes": {
+                "item_table_0_0": [
+                    45,
+                    338,
+                    612,
+                    372
+                ],
+                "item_table_0_1": [
+                    45,
+                    391,
+                    610,
+                    458
+                ],
+                "item_table_0_2": [
+                    45,
+                    476,
+                    612,
+                    511
+                ],
+                "item_table_0_3": [
+                    47,
+                    531,
+                    610,
+                    561
+                ],
+                "item_table_0_4": [
+                    46,
+                    582,
+                    611,
+                    615
+                ]
+            }
+        }
+    ]
+    }
+    </pre>
+</body>
+    </div>
+  </div>
+</div>
+</section>
+
+
+<!--<section id="description3">-->
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-12">-->
+    <!--<h1> Word grouping and labeling through semantic entities </h1>-->
+    <!--&lt;!&ndash;<p> soem blabla an images showing word grouping  </p>&ndash;&gt;-->
+        <!--<p> Coming soon  </p>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</section>-->
+
+<!--<section id="description4">-->
+<!--<div class="container">-->
+  <!--<div class="row">-->
+    <!--<div class="col-md-12">-->
+    <!--<h1> Semantic relations </h1>-->
+    <!--&lt;!&ndash;<p> soem blabla an images showing rerlations, QA pairs etc...  </p>&ndash;&gt;-->
+        <!--<p> Coming soon  </p>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</div>-->
+<!--</section>-->
